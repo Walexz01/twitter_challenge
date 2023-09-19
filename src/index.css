@@ -6,6 +6,7 @@
   --color-secondary: #150e28;
   --color-secondary2: #903aff;
   --color-secondary3: #d434fe;
+  --color-secondary4: #ff26b9;
   --container-width-lg: 80%;
   --container-width-md: 90%;
   --container-width-sm: 95%;
@@ -60,6 +61,10 @@ button {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid white;
+}
 /* =============================home==========================  */
 /* ==========================nav======================== */
 .nav_container {
@@ -83,6 +88,9 @@ button {
   font-weight: bold;
   color: white;
   z-index: 33;
+}
+.text_colored {
+  font-family: "ClashDisplay-Bold";
 }
 .text_colored span {
   color: var(--color-secondary3);
@@ -116,6 +124,7 @@ nav ul {
 .hero_section {
   /* margin-top: 5rem; */
   margin-top: 1rem;
+  padding: 0;
   border-bottom: 1px solid white;
 }
 .hero_container {
@@ -248,6 +257,107 @@ nav ul {
 .countdown .unit {
   font-size: 0.9rem;
 }
+/* =================================== intro_container =========================== */
+.intro_container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.intro_t_c {
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.intro_right,
+.intro_left {
+  position: relative;
+}
+.intro_right p {
+  text-align: left;
+}
+.intro_left::before {
+  position: absolute;
+  content: url("./assets/arrow.png");
+  bottom: -5%;
+  right: -5%;
+  z-index: -1;
+}
+.intro_right::before {
+  position: absolute;
+  content: url("./assets/star pu.png");
+  top: 20%;
+  right: 5%;
+  z-index: -1;
+}
+/* =================================== rule_reg_container =========================== */
+.rule_reg_left {
+  position: relative;
+}
+.rule_reg_left::before {
+  position: absolute;
+  content: url("./assets/star.png");
+  right: -20%;
+  top: 100%;
+  z-index: -1;
+}
+.rule_reg_left::after {
+  position: absolute;
+  content: url("./assets/star (1).png");
+  right: 50%;
+  top: -10%;
+  z-index: -1;
+}
+.rule_reg_right {
+  position: relative;
+}
+.rule_reg_right .purple_bg {
+  top: 40%;
+  left: -20%;
+}
+.rule_reg_left .purple_bg {
+  left: -0%;
+  top: -80%;
+  z-index: -1;
+}
+/* ======================== criteria ===================== */
+.criteria_left,
+.criteria_right {
+  position: relative;
+}
+.criteria_left .purple_bg {
+  top: 20%;
+  left: -30%;
+}
+.criteria_right .purple_bg {
+  top: 50%;
+  left: 0%;
+}
+.key {
+  color: var(--color-secondary4);
+  font-weight: bold;
+}
+.criteria_right::before {
+  top: 10%;
+  left: -100%;
+}
+.criteria_right::after {
+  position: absolute;
+  content: url(./assets/star.png);
+  bottom: 10%;
+  left: -20%;
+}
+
+.criterias {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.read_more {
+  margin-top: 1rem;
+}
 
 /* media query */
 @media screen and (max-width: 1320px) {
@@ -333,6 +443,25 @@ nav ul {
   .countdown .unit {
     font-size: 0.9rem;
   }
+
+  .rule_reg_right .purple_bg {
+    top: 40%;
+    left: 0%;
+  }
+  .rule_reg_left .purple_bg {
+    left: 0%;
+    top: -80%;
+    z-index: -1;
+  }
+  /* ======================== criteria ===================== */
+  .criteria_left .purple_bg {
+    top: 20%;
+    left: 0%;
+  }
+  .criteria_right .purple_bg {
+    top: 60%;
+    left: 0%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .container {
@@ -380,6 +509,69 @@ nav ul {
   ul.open {
     top: 100%;
   }
+  /* =================================== intro_container =========================== */
+  .intro_container {
+    grid-template-columns: 1fr;
+    padding: 3rem 0;
+    gap: 4rem;
+  }
+  .intro_t_c {
+    font-size: 2.2rem;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  .intro_left::before {
+    bottom: -12%;
+    right: 40%;
+    z-index: -1;
+  }
+  .intro_right p {
+    text-align: center;
+  }
+  .intro_right::before {
+    top: 20%;
+    right: 10%;
+    z-index: -1;
+  }
+
+  /* =================================== rule_reg_container =========================== */
+  .rule_reg_left::before {
+    right: 90%;
+    top: -260%;
+  }
+  .rule_reg_left {
+    order: 1;
+  }
+  .rule_reg_left::after {
+    right: 0%;
+    top: -10%;
+  }
+  .rule_reg_right .purple_bg {
+    top: -50%;
+    left: -50%;
+  }
+  .rule_reg_left .purple_bg {
+    left: 0%;
+    top: -200%;
+  }
+  /* ======================== criteria ===================== */
+  .criteria_left .purple_bg {
+    top: 20%;
+    left: -30%;
+  }
+  .criteria_right::before {
+    top: -120%;
+    left: 50%;
+  }
+  .criteria_right .purple_bg {
+    top: 50%;
+    left: 0%;
+  }
+  .criterias {
+    align-items: center;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 670px) {
   /* ======================= hero ================= */
@@ -419,6 +611,20 @@ nav ul {
     left: 70%;
     top: 70%;
   }
+  /* =================================== intro_container =========================== */
+  .intro_container {
+    padding: 3rem 0;
+  }
+  .intro_t_c {
+    font-size: 2.1rem;
+    padding: 1rem 0;
+  }
+  .intro_right::before {
+    top: 0%;
+  }
+  .intro_right p {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -447,6 +653,14 @@ nav ul {
     left: 70%;
     top: 60%;
   }
+  /* =================================== intro_container =========================== */
+  .intro_t_c {
+    font-size: 2.1rem;
+    padding: 1rem 0;
+  }
+  .intro_right::before {
+    top: -10%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -470,6 +684,16 @@ nav ul {
   .title1::before {
     top: -120%;
   }
+  /* =================================== intro_container =========================== */
+  .intro_t_c {
+    font-size: 2rem;
+  }
+  .intro_right::before {
+    top: -10%;
+  }
+  .intro_left::before {
+    bottom: -17%;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -492,5 +716,14 @@ nav ul {
   }
   .title1::before {
     top: -140%;
+  }
+  /* =================================== intro_container =========================== */
+  .intro_t_c {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+  }
+
+  .intro_left::before {
+    bottom: -20%;
   }
 }

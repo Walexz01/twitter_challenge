@@ -2,7 +2,7 @@ import BtnGradient from "../BtnGradient";
 import menuBtn from "../../assets/menu.png";
 import menuBtnClose from "../../assets/menuClose.png";
 import { useState } from "react";
-import getlink from "../../../public/getlinked.svg";
+import getlink from "../../assets/getlinked.svg";
 // import Logo from "../Logo";
 
 const Navbar = () => {
