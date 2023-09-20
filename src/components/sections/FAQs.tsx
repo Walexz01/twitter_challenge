@@ -4,7 +4,7 @@ import ColorHeader from "../ColorHeader";
 import FAQ from "../FAQ";
 const FAQs = () => {
   return (
-    <section>
+    <section id="faq">
       <div className="container intro_container">
         <div className="FAQs_right intro_right">
           <ColorHeader

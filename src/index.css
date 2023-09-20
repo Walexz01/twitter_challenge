@@ -24,6 +24,10 @@
   border: 0;
   text-decoration: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+a {
+  color: white;
 }
 
 /* general style */
@@ -89,6 +93,17 @@ section {
   /* z-index: 555; */
   cursor: pointer;
 }
+
+.nav_con a.active {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary2),
+    var(--color-secondary4)
+  );
+  -webkit-background-clip: text;
+}
+
 .logo {
   width: 120px;
 }
@@ -266,6 +281,15 @@ nav ul {
 }
 .countdown .unit {
   font-size: 0.9rem;
+}
+a.register_btn {
+  font-size: 1rem;
+  padding: 0.4rem 2rem;
+}
+a.register_btn.active {
+  border: 1px solid #ff26b9;
+  border-radius: 0.2rem;
+  color: white;
 }
 /* =================================== intro_container =========================== */
 .intro_container {
@@ -632,7 +656,10 @@ nav ul {
   gap: 10px;
   padding-right: 1rem;
 }
-.footer_container svg {
+.social {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
   font-size: 20px;
 }
 
@@ -644,6 +671,134 @@ nav ul {
 .list h4 {
   color: var(--color-secondary5);
   font-size: 1rem;
+}
+.contact_info {
+  padding: 0 3rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact_social_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.GetInTouch_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.GetInTouch_t_c {
+  padding-top: 0;
+}
+.form {
+  border-radius: 0.3rem;
+  background-color: transparent;
+  box-shadow: 5px 5px 10px #00000077;
+  border: 1px solid #00000077;
+  padding: 2rem 4rem;
+}
+.form h3 {
+  margin-top: 0.5rem;
+  color: var(--color-secondary5);
+}
+.form form {
+  margin-top: 3rem;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+  flex-direction: column;
+}
+.GetInTouch_right,
+.GetInTouch_left {
+  position: relative;
+}
+.GetInTouch_left .purple_bg {
+  top: -20%;
+  left: -50%;
+}
+.GetInTouch_right .purple_bg {
+  left: 0%;
+  width: 50%;
+  top: 80%;
+}
+form input,
+textarea {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 0.3rem;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  color: white;
+  padding: 10px;
+}
+form textarea {
+  height: 200px;
+  resize: none;
+}
+.submit_contact {
+  margin: 0 auto;
+}
+.list_md {
+  display: none;
+}
+.create_today {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.movement {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.movement img {
+  width: 100px;
+}
+.register_container {
+  align-items: center;
+  grid-template-columns: 1fr 1.5fr;
+}
+.register_right h3 {
+  font-size: 1.7rem;
+}
+.input_group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.input_group input {
+  font-size: 0.8rem;
+}
+.two_to_1,
+.two {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+.notice {
+  font-size: 0.8rem;
+  color: var(--color-secondary4);
+}
+.checkbox {
+  width: auto;
+}
+.label_check {
+  font-size: 0.8rem;
+}
+.checkbox_con {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
 }
 /* media query */
 @media screen and (max-width: 1170px) {
@@ -949,6 +1104,29 @@ nav ul {
   .list h4 {
     font-size: 1.1rem;
   }
+  .GetInTouch_container {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    padding: 2rem;
+  }
+  .contact_info {
+    padding: 0 1rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .contact_social_list {
+    display: none;
+  }
+  .list_md {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .list_md h4 {
+    margin: 10px 0;
+  }
 }
 @media screen and (max-width: 810px) {
   /* ===================== foooter ========================= */
@@ -1065,6 +1243,42 @@ nav ul {
   .sponsors {
     padding: 4rem 2rem;
   }
+  .register_right {
+    text-align: center;
+  }
+
+  .create_today {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  .movement {
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  .movement img {
+    width: 70px;
+  }
+  .register_right h3 {
+    font-size: 1.5rem;
+  }
+  .two_to_1 {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .input_group {
+    align-items: flex-start;
+  }
+  .notice {
+    font-size: 0.8rem;
+  }
+  .checkbox {
+    width: auto;
+  }
+  .checkbox_con {
+    margin-top: -2rem;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -1175,6 +1389,11 @@ nav ul {
   .reward_left .second_star {
     top: -55%;
     left: 10%;
+  }
+  .two {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

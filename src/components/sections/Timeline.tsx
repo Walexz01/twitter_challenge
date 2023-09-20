@@ -4,7 +4,7 @@ import Star3Abso from "../Star3Abso";
 
 const Timeline = () => {
   return (
-    <section>
+    <section id="timeline">
       <div className="container timeline_container">
         <div className="timeline_header">
           <ColorHeader className="timeline_heading" text="Timeline" />

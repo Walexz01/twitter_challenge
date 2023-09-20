@@ -1,8 +1,9 @@
-import BtnGradient from "../BtnGradient";
+// import BtnGradient from "../BtnGradient";
 import menuBtn from "../../assets/menu.png";
 import menuBtnClose from "../../assets/menuClose.png";
 import { useState } from "react";
 import getlink from "../../assets/getlinked.svg";
+import { NavLink } from "react-router-dom";
 // import Logo from "../Logo";
 
 const Navbar = () => {
@@ -15,11 +16,14 @@ const Navbar = () => {
         {/* or */}
         {/* <Logo /> */}
         <ul className={isNavOpen ? "open" : ""}>
-          <li>Timeline</li>
-          <li>Overview</li>
-          <li>FAQs</li>
-          <li>Contact</li>
-          <BtnGradient className="register_btn" label="Register" />
+          <a href="/#timeline">Timeline</a>
+          <a href="/#overview">Overview</a>
+          <a href="/#faq">FAQs</a>
+          <NavLink to={"contact"}>Contact</NavLink>
+          <NavLink to={"register"} className="register_btn btn">
+            Register
+          </NavLink>
+          {/* <BtnGradient className="register_btn" label="Register" /> */}
         </ul>
         <img
           onClick={() => setIsNavOpen(!isNavOpen)}

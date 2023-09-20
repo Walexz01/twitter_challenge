@@ -1,6 +1,6 @@
 interface Props {
   className: string;
-  text: string;
+  text?: string;
   colored_text?: string;
 }
 const ColorHeader = ({ className, colored_text, text }: Props) => {

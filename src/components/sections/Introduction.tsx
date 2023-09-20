@@ -2,7 +2,7 @@ import intro_img from "../../assets/intro-img.png";
 import ColorHeader from "../ColorHeader";
 const Intro = () => {
   return (
-    <section>
+    <section id="overview">
       <div className="container intro_container">
         <div className="intro_left">
           <img src={intro_img} alt="" />

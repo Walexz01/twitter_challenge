@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import man from "../../assets/man-wearing-smart-glasses-touching-virtual-screen 1 (1).png";
 import bubble from "../../assets/Image 1.png";
 import { heroSvg, hero_left_imgs, herorightImg } from "../../data";
@@ -6,7 +5,6 @@ import CountDown from "../CountDown";
 const Homehero = () => {
   return (
     <header>
-      <Navbar />
       <section className="hero_section">
         <div className="container ">
           <div className="up">

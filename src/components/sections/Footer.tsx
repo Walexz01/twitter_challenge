@@ -1,8 +1,8 @@
 import getlink from "../../assets/getlinked.svg";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
-import { BsInstagram } from "react-icons/bs";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import { FaLocationDot } from "react-icons/fa6";
+
+import Social from "../Social";
 
 const Footer = () => {
   return (
@@ -33,10 +33,7 @@ const Footer = () => {
               <p>Register</p>
               <div className="follow_us">
                 <h4>Follow us</h4>
-                <BsInstagram />
-                <FaXTwitter />
-                <FaFacebookF />
-                <FaLinkedinIn />
+                <Social />
               </div>
             </div>
           </div>
