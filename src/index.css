@@ -40,6 +40,11 @@ body {
   margin: 0 auto;
   position: relative;
 }
+.nav_con {
+  width: var(--container-width-lg);
+  max-width: 1920px;
+  margin: 0 auto;
+}
 h1,
 h2,
 h3,
@@ -664,7 +669,8 @@ nav ul {
 }
 
 @media screen and (max-width: 1320px) {
-  .container {
+  .container,
+  .nav_con {
     width: var(--container-width-md);
     max-width: 1920px;
     margin: 0 auto;
@@ -767,7 +773,8 @@ nav ul {
   }
 }
 @media screen and (max-width: 1024px) {
-  .container {
+  .container,
+  .nav_con {
     width: var(--container-width-sm);
     max-width: 1920px;
     margin: 0 auto;
@@ -783,6 +790,7 @@ nav ul {
   .nav_container {
     padding: 1.5rem 0;
     position: relative;
+    width: 100%;
   }
   .menu {
     display: block;

@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <div className="nav_container">
-      <nav className="container">
+      <nav className="nav_con">
         {/* logo text */}
         <img src={getlink} className="logo" alt="" />
         {/* or */}
