@@ -1,8 +1,6 @@
 import ColorHeader from "../ColorHeader";
 import TimelineList from "../TimelineList";
-import star from "../../assets/star.png";
-import star1 from "../../assets/star pu.png";
-import star2 from "../../assets/star (1).png";
+import Star3Abso from "../Star3Abso";
 
 const Timeline = () => {
   return (
@@ -15,9 +13,7 @@ const Timeline = () => {
             upcoming event.
           </p>
         </div>
-        <img src={star} className="star first_star" alt="" />
-        <img src={star1} className="star second_star" alt="" />
-        <img src={star2} className="star thrid_star" alt="" />
+        <Star3Abso />
         <TimelineList />
       </div>
     </section>

@@ -38,6 +38,7 @@ body {
   width: var(--container-width-lg);
   max-width: 1920px;
   margin: 0 auto;
+  position: relative;
 }
 h1,
 h2,
@@ -65,6 +66,9 @@ button {
 section {
   padding: 3rem 0;
   border-bottom: 1px solid white;
+}
+.no_bottomborder {
+  border-color: transparent;
 }
 /* =============================home==========================  */
 /* ==========================nav======================== */
@@ -425,6 +429,9 @@ nav ul {
   left: 10%;
 }
 /* ==============================reward====================================== */
+.reward_section {
+  padding-bottom: 6rem;
+}
 .reward_header {
   display: flex;
   flex-direction: column;
@@ -488,7 +495,151 @@ nav ul {
   background-color: #8f3aff4d;
   padding: 7rem 3.5rem 4rem 3.5rem;
 }
+.reward_left .first_star {
+  top: -20%;
+  left: 95%;
+}
+.reward_left .second_star {
+  top: -35%;
+  left: 30%;
+}
+.reward_left .thrid_star {
+  top: 100%;
+  left: 30%;
+}
+.reward_cards .first_star {
+  left: 95%;
+  top: -10%;
+}
+.reward_cards .second_star {
+  top: -10%;
+  left: 0%;
+}
+.reward_cards .thrid_star {
+  top: 100%;
+  left: 70%;
+}
+/* ================================= sponsors ==========================  */
+.sponsors {
+  margin-top: 5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-secondary5);
+  border-radius: 0.4rem;
+  padding: 8rem 5rem;
+}
+.partners_container .purple_first {
+  top: -50%;
+  left: -50%;
+}
+.partners_container .purple_second {
+  top: 20%;
+  left: 0%;
+  align-items: flex-end;
+}
+.intro_right p {
+  margin-top: 1rem;
+}
+.policies_card {
+  border: 1px solid var(--color-secondary5);
+  padding: 2rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+.policies_card .head p {
+  text-align: left;
+}
+.policies_card h4 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  color: var(--color-secondary5);
+}
+.policy_list .policy {
+  display: flex;
+  text-align: left;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+.policy img {
+  width: 20px;
+  height: 20px;
+}
+.policy_btn_container {
+  margin-top: 2rem;
+  text-align: center;
+}
+.policies_right::before {
+  display: none;
+}
+.policies_right .purple_bg {
+  top: 70%;
+  left: -40%;
+}
+.policies_right .thrid_star {
+  top: 0%;
+  left: 80%;
+}
+.policies_right .first_star {
+  display: none;
+}
+.policies_right .second_star {
+  top: 95%;
+  left: -20%;
+}
+/* ===================== foooter ========================= */
+.footer_container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  font-size: 0.8rem;
+  gap: 2rem;
+}
+.footer_bottom {
+  text-align: center;
+  padding-top: 3rem;
+}
+.follow_us {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.col1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.bottom {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0rem;
+}
+.bottom p {
+  padding: 0 1rem;
+}
+.bottom .terms {
+  padding-left: 0;
+  border-right: 2px solid var(--color-secondary5);
+}
+.contact_detail {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding-right: 1rem;
+}
+.footer_container svg {
+  font-size: 20px;
+}
 
+.footer_container .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.list h4 {
+  color: var(--color-secondary5);
+  font-size: 1rem;
+}
 /* media query */
 @media screen and (max-width: 1170px) {
   .time_content {
@@ -770,6 +921,39 @@ nav ul {
     left: -20%;
     z-index: -1;
   }
+  /* ================================= sponsors ==========================  */
+  .sponsors {
+    margin-top: 3rem;
+    padding: 6rem 3rem;
+  }
+  /* ===================== foooter ========================= */
+  .footer_container {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1rem;
+  }
+  .bottom {
+    padding-top: 1.5rem;
+    white-space: nowrap;
+  }
+  .contact_detail {
+    padding-right: 0rem;
+  }
+  .list h4 {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  /* ===================== foooter ========================= */
+  .footer_container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  .bottom {
+    padding-top: 1.5rem;
+  }
+  .contact_detail {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 670px) {
   /* ======================= hero ================= */
@@ -853,6 +1037,26 @@ nav ul {
     padding: 7rem 3rem 4rem 3rem;
     order: -1;
   }
+  .reward_cards .purple_bg {
+    top: 95%;
+    left: 0%;
+  }
+  .reward_left .second_star {
+    top: -40%;
+    left: 10%;
+  }
+  .reward_cards .second_star {
+    top: 0%;
+    left: -30%;
+  }
+  .reward_cards .first_star {
+    left: 100%;
+    top: 65%;
+  }
+  /* ================================= sponsors ==========================  */
+  .sponsors {
+    padding: 4rem 2rem;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -899,6 +1103,23 @@ nav ul {
     width: 100%;
     margin: 0 auto;
   }
+  /* ================================= sponsors ==========================  */
+  .sponsors {
+    padding: 2rem 2rem;
+  }
+  .policies_card {
+    padding: 2rem 1rem;
+  }
+  .policies_card h4 {
+    font-size: 1rem;
+  }
+  .policy_list .policy {
+    gap: 0.5rem;
+  }
+  .policy img {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -943,6 +1164,10 @@ nav ul {
   .reward_card {
     padding: 7rem 3rem 2rem 3rem;
   }
+  .reward_left .second_star {
+    top: -55%;
+    left: 10%;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -974,5 +1199,13 @@ nav ul {
 
   .intro_left::before {
     bottom: -20%;
+  }
+  .reward_left .second_star {
+    top: -65%;
+    left: 10%;
+  }
+  /* ================================= sponsors ==========================  */
+  .sponsors {
+    padding: 2rem 1rem;
   }
 }
