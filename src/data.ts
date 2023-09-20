@@ -4,6 +4,10 @@ import purple_bg from "./assets/Purple-Lens-Flare-PNG.png";
 import chainSvg from "./assets/chain.svg";
 import spikeSvg from "./assets/spike.svg";
 import metrix from "./assets/metrix 1.png";
+import silver_medal from "./assets/silver_medal 1.png";
+import gold_medal from "./assets/gold_medal 1.png";
+import bronze_medal from "./assets/bronze_medal 1.png";
+
 
 
 interface heroImgs{
@@ -77,4 +81,99 @@ export const criteria:Criteria[] =[
         key:'Adherence to Hackathon Rules',
         value:'Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.'
     },
+]
+interface FAQ{
+    question:string
+    answer:string
+}
+export const FAQTEXT:FAQ[]=[
+    {
+        question:'Can I work on a project I started before the hackathon?',
+        answer:'Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.'
+    },
+    {
+        question:'What happens if I need help during the hackathon?',
+        answer:'Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.'
+    },
+    {
+        question:"What happens if I don't have an idea for a project?",
+        answer:'Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.'
+
+    },
+    {
+        question:"Can I join a team or do I have to come with one?",
+        answer:'Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.'
+    },
+    {
+        question:"What happens after the hackathon ends",
+        answer:'Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.'
+    },
+    {
+        question:"Can I work on a project I started before the hackathon?",
+        answer:'Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.'
+    }
+]
+interface TimeLine {
+    heading: string;
+    text: string;
+    date: string;
+  }
+export const TimeLines:TimeLine[]=[
+    {
+        heading:'Hackathon Announcement',
+        text:'The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register',
+        date:'November 18, 2023'
+    },
+    {
+        heading:"Teams Registration begins",
+        text:"Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register",
+        date:"November 18, 2023"
+    },
+    {
+        heading:"Teams Registration ends",
+        text:"Interested Participants are no longer Allowed to register",
+        date:"November 18, 2023"
+    },
+    {
+        heading:"Announcement of the accepted teams and ideas",
+        text:"All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced",
+        date:"November 18, 2023"
+    },
+    {
+        heading:"Getlinked Hackathon 1.0 Offically Begins",
+        text:"Accepted teams can now proceed to build their ground breaking skill driven solutions",
+        date:"November 18, 2023"
+    },
+    {
+        heading:"Demo Day",
+        text:"Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day",
+        date:"November 18, 2023"
+    }
+]
+interface Position{
+    pos:number,
+    position:string,
+    price:string
+    badge:string
+}
+
+export const Positions:Position[]=[
+    {
+        pos:2,
+        position:'2nd',
+        price:"N300,000",
+        badge:silver_medal
+    },
+    {
+        pos:1,
+        position:"1st",
+        price:"N400,000",
+        badge:gold_medal
+    },
+    {
+        pos:3,
+        position:"3rd",
+        price:"N150,000",
+        badge:bronze_medal
+    }
 ]
