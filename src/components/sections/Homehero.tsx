@@ -3,13 +3,24 @@ import bubble from "../../assets/Image 1.png";
 import { heroSvg, hero_left_imgs, herorightImg } from "../../data";
 import CountDown from "../CountDown";
 import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 const Homehero = () => {
   return (
     <header>
       <section className="hero_section">
         <div className="container ">
           <div className="up">
-            <p className="text_under">Igniting a Revolution in HR Innovation</p>
+            {/* <div className=""> */}
+            <Typewriter
+              options={{
+                strings: ["Igniting a Revolution in HR Innovation", ""],
+                autoStart: true,
+                loop: true,
+                delay: 100,
+                wrapperClassName: "text_under",
+              }}
+            />
+            {/* </div> */}
           </div>
           <div className="hero_container">
             <div className="heroleft">

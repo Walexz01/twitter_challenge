@@ -4,11 +4,13 @@ import Social from "../Social";
 import { Link, NavLink } from "react-router-dom";
 import { Links, contacts } from "../../data";
 import React from "react";
+import Star3Abso from "../Star3Abso";
 
 const Footer = () => {
   return (
     <section className="no_bottomborder">
       <div className="container">
+        <Star3Abso />
         <div className="footer_container">
           <div className="col1">
             <div className="top list">
