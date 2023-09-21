@@ -1,8 +1,9 @@
 import getlink from "../../assets/getlinked.svg";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { FaLocationDot } from "react-icons/fa6";
 
 import Social from "../Social";
+import { Link, NavLink } from "react-router-dom";
+import { Links, contacts } from "../../data";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -11,7 +12,9 @@ const Footer = () => {
         <div className="footer_container">
           <div className="col1">
             <div className="top list">
-              <img src={getlink} className="logo" alt="" />
+              <Link to={"/"}>
+                <img src={getlink} className="logo" alt="" />
+              </Link>
               <p>
                 Getlinked Tech Hackathon is a technology innovation program
                 established by a group of organizations with the aim of
@@ -20,17 +23,26 @@ const Footer = () => {
               </p>
             </div>
             <div className="bottom">
-              <p className="terms">Terms of Use</p>
-              <p>Privacy Policy</p>
+              <a href="#">
+                <p className="terms">Terms of Use</p>
+              </a>
+              <a href="#">
+                <p>Privacy Policy</p>
+              </a>
             </div>
           </div>
           <div className="col2">
             <div className="list">
               <h4>Useful Links</h4>
-              <p>Overview</p>
-              <p>Timeline</p>
-              <p>FAQs</p>
-              <p>Register</p>
+              {Links.map(({ label, href, to = "", type }, index) => (
+                <React.Fragment key={index}>
+                  {type === "nalink" ? (
+                    <NavLink to={to}>{label}</NavLink>
+                  ) : (
+                    <a href={href}>{label}</a>
+                  )}
+                </React.Fragment>
+              ))}
               <div className="follow_us">
                 <h4>Follow us</h4>
                 <Social />
@@ -40,12 +52,16 @@ const Footer = () => {
           <div className="col3">
             <div className="list">
               <h4>Contact Us</h4>
-              <p className="contact_detail">
-                <BiSolidPhoneCall /> +234 679 81819
-              </p>
-              <p className="contact_detail">
-                <FaLocationDot /> 27,Alara Street Yaba 100012 Lagos State
-              </p>
+              {contacts.map(({ Icon, href, label }, index) => (
+                <a
+                  key={index}
+                  target="_blank"
+                  href={href}
+                  className="contact_detail"
+                >
+                  <Icon /> {label}
+                </a>
+              ))}
             </div>
           </div>
         </div>

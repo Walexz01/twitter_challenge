@@ -2,6 +2,7 @@ import man from "../../assets/man-wearing-smart-glasses-touching-virtual-screen 
 import bubble from "../../assets/Image 1.png";
 import { heroSvg, hero_left_imgs, herorightImg } from "../../data";
 import CountDown from "../CountDown";
+import { Link } from "react-router-dom";
 const Homehero = () => {
   return (
     <header>
@@ -29,7 +30,9 @@ const Homehero = () => {
                 Participate in getlinked tech Hackathon 2023 stand a chance to
                 win a Big prize
               </p>
-              <button className="hero_btn btn">Register</button>
+              <Link to={"register"} className="hero_btn btn register_btn">
+                Register
+              </Link>
               <CountDown />
             </div>
             <div className="heroright">

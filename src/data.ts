@@ -7,9 +7,99 @@ import metrix from "./assets/metrix 1.png";
 import silver_medal from "./assets/silver_medal 1.png";
 import gold_medal from "./assets/gold_medal 1.png";
 import bronze_medal from "./assets/bronze_medal 1.png";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
+import { IconType } from "react-icons";
+import { BsInstagram } from "react-icons/bs";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+
+interface Link{
+    href?:string,
+    label:string
+    to?:string,
+    className?:string
+    type?:'nalink'
+}
+
+export const Links:Link[] =[
+    {
+        href:"/#timeline",
+        label:"Timeline"
+
+    },
+    {
+        href:"/#overview",
+        label:"Overview"
+    },
+    {
+        href:"/#faq",
+        label:"FAQs"
+    },
+    {
+        to:"contact",
+        label:"Contact",
+        type:"nalink"
+    },
+    {
+        to:"register",
+        className:'register_btn btn',
+        label:'Register',
+        type:"nalink"
+    }
+]
+
+interface contact{
+    label:string,
+    href:string,
+    Icon:IconType
+}
+export const contacts:contact[] = [
+    {
+        label:"+234 679 81819",
+        href:'tel:+234 679 81819',
+        Icon:BiSolidPhoneCall,
+        
+    },{
+        label:"27,Alara Street Yaba 100012 Lagos State",
+        href:'https://maps.app.goo.gl/rpZhSAXitmunZmvY9',
+        Icon:FaLocationDot,
+        
+    }
+]
+
+interface social{
+    link:string,
+    Icon:IconType
+}
 
 
+export const socials:social[]=[
+    {
+        link:'https://www.instagram.com/walexz014/',
+        Icon:BsInstagram
+    },
+    {
+        link:'https://twitter.com/walexz01',
+        Icon:FaXTwitter
+    },
+    {
+        link:'https://web.facebook.com/adewaleoluwaseun.adegbite',
+        Icon:FaFacebookF
+    },
+    {
+        link:'https://www.linkedin.com/in/adegbite-adewale-oluwaseun-59691b237',
+        Icon:FaLinkedinIn
+    }
+]
 
+export const policies=[
+    {
+        text:'The Standard License grants you a non-exclusive right to navigate and register for our event'
+    },
+    {
+        text:"You are licensed to use the item available at any free source sites, for your project developement"
+    }
+]
 interface heroImgs{
     className:string
     img:string

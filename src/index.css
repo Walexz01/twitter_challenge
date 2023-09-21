@@ -106,6 +106,8 @@ section {
 
 .logo {
   width: 120px;
+  position: relative;
+  z-index: 11;
 }
 .header_logo {
   cursor: pointer;
@@ -137,10 +139,32 @@ nav ul {
 }
 .btn {
   padding: 0.6rem 2rem;
-  background-image: url("./assets/Rectangle 6.png");
+  cursor: pointer;
+  /* z-index: 111; */
+  background: linear-gradient(
+    270deg,
+    hsl(266deg 100% 61%) 0%,
+    hsl(281deg 100% 60%) 33%,
+    hsl(301deg 81% 54%) 67%,
+    hsl(320deg 99% 60%) 100%
+  );
+  position: relative;
   border-radius: 0.2rem;
   color: white;
   font-size: 1rem;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+.btn:hover {
+  /* background: transparent; */
+  /* color: #ff26b9; */
+  /* border: 1px solid var(--color-secondary4); */
+  background: linear-gradient(var(--color-secondary), var(--color-secondary))
+      padding-box,
+    linear-gradient(to right, #9a39ff, #ff29b9) border-box;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  color: var(--color-secondary4);
 }
 .register_btn {
   margin-left: 1rem;
@@ -286,10 +310,24 @@ a.register_btn {
   font-size: 1rem;
   padding: 0.4rem 2rem;
 }
-a.register_btn.active {
-  border: 1px solid #ff26b9;
+a.register_btn.active:hover {
+  background: linear-gradient(
+    270deg,
+    hsl(266deg 100% 61%) 0%,
+    hsl(281deg 100% 60%) 33%,
+    hsl(301deg 81% 54%) 67%,
+    hsl(320deg 99% 60%) 100%
+  );
   border-radius: 0.2rem;
   color: white;
+}
+a.register_btn.active {
+  background: linear-gradient(var(--color-secondary), var(--color-secondary))
+      padding-box,
+    linear-gradient(to right, #9a39ff, #ff29b9) border-box;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  color: var(--color-secondary4);
 }
 /* =================================== intro_container =========================== */
 .intro_container {
@@ -403,6 +441,7 @@ a.register_btn.active {
 .faq {
   padding: 2rem 0 0.5rem 0;
   border-bottom: 1px solid var(--color-secondary5);
+  cursor: pointer;
 }
 .faq h3 {
   font-size: 0.85rem;
@@ -703,6 +742,7 @@ a.register_btn.active {
 .form h3 {
   margin-top: 0.5rem;
   color: var(--color-secondary5);
+  font-family: "ClashDisplay-Bold";
 }
 .form form {
   margin-top: 3rem;
@@ -725,8 +765,12 @@ a.register_btn.active {
   width: 50%;
   top: 80%;
 }
+select option {
+  background: var(--color-secondary);
+}
 form input,
-textarea {
+textarea,
+select {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 0.3rem;
@@ -799,6 +843,57 @@ form textarea {
   align-items: center;
   gap: 5px;
   font-size: 0.7rem;
+  margin-top: -2rem;
+}
+.contact_info {
+  position: relative;
+}
+.reg_submit {
+  width: 100%;
+}
+/* =================================modal===================================== */
+.modal {
+  position: absolute;
+  top: 0%;
+  display: grid;
+  place-items: center;
+  left: 0%;
+  background: #150e2871;
+  z-index: 2000;
+  width: 100vw;
+  height: 100%;
+  padding-top: 5rem;
+}
+
+.modal .content {
+  display: flex;
+  background: linear-gradient(var(--color-secondary), var(--color-secondary))
+      padding-box,
+    linear-gradient(to right, #9a39ff, #ff29b9) border-box;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 350px;
+  width: 85%;
+  font-size: 1rem;
+  gap: 0.9rem;
+  padding: 2rem;
+  margin: auto;
+}
+.modal .content p {
+  font-size: 0.8rem;
+}
+.modal .content img {
+  width: 300px;
+}
+.modal.close {
+  display: none;
+}
+.label_top {
+  display: none;
 }
 /* media query */
 @media screen and (max-width: 1170px) {
@@ -1109,6 +1204,18 @@ form textarea {
   }
   .form {
     padding: 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid transparent;
+  }
+  .label_top {
+    color: var(--color-secondary5);
+    font-size: 2.2rem;
+    display: block;
+    font-family: "ClashDisplay-Bold";
+  }
+  .form h3 {
+    display: none;
   }
   .contact_info {
     padding: 0 1rem;
@@ -1139,6 +1246,10 @@ form textarea {
   }
   .contact_detail {
     width: 90%;
+  }
+  .modal {
+    top: 20%;
+    padding-top: 5rem;
   }
 }
 @media screen and (max-width: 670px) {
@@ -1341,6 +1452,9 @@ form textarea {
   .policy img {
     width: 15px;
     height: 15px;
+  }
+  .reg_submit {
+    width: auto;
   }
 }
 

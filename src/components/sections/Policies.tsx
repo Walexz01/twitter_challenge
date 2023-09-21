@@ -4,6 +4,7 @@ import mark from "../../assets/list terms.png";
 import BtnGradient from "../BtnGradient";
 import Star3Abso from "../Star3Abso";
 import purple_bg from "../../assets/Purple-Lens-Flare-PNG.png";
+import { policies } from "../../data";
 const Policies = () => {
   return (
     <section>
@@ -37,16 +38,12 @@ const Policies = () => {
               </p>
             </div>
             <div className="policy_list">
-              <p className="policy">
-                <img src={mark} alt="" />
-                The Standard License grants you a non-exclusive right to
-                navigate and register for our event
-              </p>
-              <p className="policy">
-                <img src={mark} alt="" />
-                You are licensed to use the item available at any free source
-                sites, for your project developement
-              </p>
+              {policies.map(({ text }, index) => (
+                <p key={index} className="policy">
+                  <img src={mark} alt="" />
+                  {text}
+                </p>
+              ))}
             </div>
             <div className="policy_btn_container">
               <BtnGradient label="Read More" className="policy_btn" />

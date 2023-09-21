@@ -1,9 +1,10 @@
 // import BtnGradient from "../BtnGradient";
 import menuBtn from "../../assets/menu.png";
 import menuBtnClose from "../../assets/menuClose.png";
-import { useState } from "react";
+import React, { useState } from "react";
 import getlink from "../../assets/getlinked.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Links } from "../../data";
 // import Logo from "../Logo";
 
 const Navbar = () => {
@@ -12,18 +13,35 @@ const Navbar = () => {
     <div className="nav_container">
       <nav className="nav_con">
         {/* logo text */}
-        <img src={getlink} className="logo" alt="" />
+        <Link to={"/"}>
+          <img src={getlink} className="logo" alt="" />
+        </Link>
         {/* or */}
         {/* <Logo /> */}
         <ul className={isNavOpen ? "open" : ""}>
-          <a href="/#timeline">Timeline</a>
-          <a href="/#overview">Overview</a>
-          <a href="/#faq">FAQs</a>
-          <NavLink to={"contact"}>Contact</NavLink>
-          <NavLink to={"register"} className="register_btn btn">
-            Register
-          </NavLink>
-          {/* <BtnGradient className="register_btn" label="Register" /> */}
+          {Links.map(
+            ({ label, className = "", href, to = "", type }, index) => (
+              <React.Fragment key={index}>
+                {type === "nalink" ? (
+                  <NavLink
+                    onClick={() => setIsNavOpen(false)}
+                    to={to}
+                    className={className}
+                  >
+                    {label}
+                  </NavLink>
+                ) : (
+                  <a
+                    onClick={() => setIsNavOpen(false)}
+                    href={href}
+                    className={className}
+                  >
+                    {label}
+                  </a>
+                )}
+              </React.Fragment>
+            )
+          )}
         </ul>
         <img
           onClick={() => setIsNavOpen(!isNavOpen)}
