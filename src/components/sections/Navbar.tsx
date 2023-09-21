@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="nav_container">
       <nav className="nav_con">
         {/* logo text */}
-        <Link to={"/"}>
+        <Link to={"/"} onClick={() => setIsNavOpen(false)}>
           <img src={getlink} className="logo" alt="" />
         </Link>
         {/* or */}
