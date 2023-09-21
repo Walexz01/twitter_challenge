@@ -7,7 +7,7 @@ import purple_bg from "../../assets/Purple-Lens-Flare-PNG.png";
 import { policies } from "../../data";
 const Policies = () => {
   return (
-    <section>
+    <section id="privacy_policy">
       <div className="container intro_container policies_container">
         <div className="policies_right intro_right">
           <img className="purple_bg" src={purple_bg} alt="" />

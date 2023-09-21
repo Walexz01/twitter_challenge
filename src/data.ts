@@ -245,6 +245,7 @@ interface Position{
     position:string,
     price:string
     badge:string
+    className?:string
 }
 
 export const Positions:Position[]=[
@@ -258,7 +259,8 @@ export const Positions:Position[]=[
         pos:1,
         position:"1st",
         price:"N400,000",
-        badge:gold_medal
+        badge:gold_medal,
+        className:'first'
     },
     {
         pos:3,

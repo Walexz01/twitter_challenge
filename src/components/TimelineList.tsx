@@ -19,18 +19,22 @@ const TimelineList = () => {
             contentStyle={{
               background: "transparent",
               color: "#fff",
+              boxShadow: "0 0 0 4px transparent",
             }}
             contentArrowStyle={{ borderRight: "7px solid  transparent" }}
             date={date}
             dateClassName="timeline_date"
             iconStyle={{
-              background: "#D434FE",
+              background:
+                "linear-gradient(90deg,var(--color-secondary2),var(--color-secondary4))",
+
               color: "#fff",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontSize: "1.2rem",
               fontWeight: "bolder",
+              boxShadow: "0 0 0 10px #150e28",
             }}
             icon={<span>{index + 1}</span>}
           >

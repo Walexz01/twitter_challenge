@@ -16,6 +16,7 @@
   --container-width-md: 90%;
   --container-width-sm: 95%;
   --transition: all 500ms ease;
+  --right-container-ani: cd-bounce-2-inverse 2s linear normal;
 }
 
 *,
@@ -208,6 +209,9 @@ nav ul {
   margin-left: 1rem;
 }
 /* ======================= hero ================= */
+.right_ani {
+  animation: var(--right-container-ani);
+}
 .hero_section {
   /* margin-top: 5rem; */
   margin-top: 1rem;
@@ -299,6 +303,7 @@ nav ul {
   width: 100%;
   left: 10px;
 }
+
 .heroright {
   position: relative;
 }
@@ -530,6 +535,10 @@ a.register_btn.active {
   position: relative;
   padding-top: 3rem;
 }
+.vertical-timeline:first-child {
+  padding-top: 10rem;
+}
+
 .vertical-timeline {
   padding: 10rem 0 0 0;
 }
@@ -584,7 +593,7 @@ a.register_btn.active {
   align-items: start;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
 }
 .reward_cards .purple_bg {
   bottom: 20%;
@@ -595,6 +604,12 @@ a.register_btn.active {
   top: -30%;
   position: absolute;
   left: 0;
+  right: 0;
+}
+.reward_card .first {
+  width: fit-content;
+  top: -60%;
+  left: -20%;
   right: 0;
 }
 
@@ -961,12 +976,19 @@ form textarea {
     padding: 7rem 1.5rem 2rem 1.5rem;
   }
   .reward_cards {
-    gap: 1rem;
-    padding-top: 6rem;
+    gap: 3em;
   }
   .first_pos {
     background-color: #8f3aff4d;
     padding: 7rem 3rem 4rem 3rem;
+  }
+  .reward_bottom {
+    grid-template-columns: 1fr;
+  }
+  .reward_card .first {
+    top: -60%;
+    left: -25%;
+    right: 0;
   }
 }
 
@@ -1223,8 +1245,7 @@ form textarea {
     padding: 7rem 1.5rem 2rem 1.5rem;
   }
   .reward_cards {
-    gap: 1rem;
-    padding-top: 4rem;
+    gap: 2rem;
   }
   .first_pos {
     background-color: #8f3aff4d;
@@ -1386,7 +1407,7 @@ form textarea {
   .reward_cards {
     grid-template-columns: 1fr;
     gap: 7rem;
-    padding-top: 4rem;
+    padding-top: 10rem;
   }
   .first_pos {
     background-color: #8f3aff4d;
@@ -1515,6 +1536,10 @@ form textarea {
   .reg_submit {
     width: auto;
   }
+  .reward_cards .first {
+    top: -70%;
+    left: -25%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1572,14 +1597,20 @@ form textarea {
 
 @media screen and (max-width: 390px) {
   /* ======================= hero ================= */
+  .hero_section .text_under {
+    letter-spacing: 0;
+  }
   .hero_section {
     padding: 2rem 0.7rem 0 0.7rem;
   }
   .hero_svg {
-    width: 25px;
+    width: 22px;
   }
   .heroleft h2 {
     font-size: 2rem;
+  }
+  .hero_img_bubble {
+    left: 0;
   }
   .short_intro {
     font-size: 0.9rem;

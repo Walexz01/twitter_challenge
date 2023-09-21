@@ -28,12 +28,12 @@ const Reward = () => {
           <div className="reward_right reward_cards">
             <Star3Abso />
             <img className="purple_bg" src={purple_bg} alt="" />
-            {Positions.map(({ badge, pos, position, price }) => (
+            {Positions.map(({ badge, pos, position, price, className }) => (
               <div
                 className={pos === 1 ? "reward_card first_pos" : "reward_card"}
                 key={pos}
               >
-                <img src={badge} alt="" />
+                <img src={badge} alt="" className={className} />
                 <div className="content">
                   <h3 className="position">{position}</h3>
                   <span>Runner</span>

@@ -25,10 +25,10 @@ const Footer = () => {
               </p>
             </div>
             <div className="bottom">
-              <a href="#">
+              <a href="/#privacy_policy">
                 <p className="terms">Terms of Use</p>
               </a>
-              <a href="#">
+              <a href="/#privacy_policy">
                 <p>Privacy Policy</p>
               </a>
             </div>
