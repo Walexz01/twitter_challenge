@@ -1540,6 +1540,9 @@ form textarea {
     top: -70%;
     left: -25%;
   }
+  .form {
+    padding: 1rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1604,7 +1607,7 @@ form textarea {
     padding: 2rem 0.7rem 0 0.7rem;
   }
   .hero_svg {
-    width: 22px;
+    width: 25px;
   }
   .heroleft h2 {
     font-size: 2rem;
