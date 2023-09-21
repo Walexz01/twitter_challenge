@@ -8,6 +8,7 @@
   --color-secondary3: #d434fe;
   --color-secondary4: #ff26b9;
   --color-secondary5: #d434fe;
+  --section_b-color: #ffffff4b;
   --container-width-lg: 80%;
   --container-width-md: 90%;
   --container-width-sm: 95%;
@@ -74,7 +75,7 @@ button {
 }
 section {
   padding: 3rem 0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--section_b-color);
 }
 .no_bottomborder {
   border-color: transparent;
@@ -83,7 +84,7 @@ section {
 /* ==========================nav======================== */
 .nav_container {
   padding: 1.5rem 0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--section_b-color);
   top: 0;
   left: 0;
   right: 0;
@@ -174,7 +175,7 @@ nav ul {
   /* margin-top: 5rem; */
   margin-top: 1rem;
   padding: 0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--section_b-color);
 }
 .hero_container {
   display: grid;
