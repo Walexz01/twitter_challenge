@@ -26,7 +26,7 @@ const TimelineList = () => {
             dateClassName="timeline_date"
             iconStyle={{
               background:
-                "linear-gradient(90deg,var(--color-secondary2),var(--color-secondary4))",
+                "linear-gradient(90deg,var(--color-secondary4),var(--color-secondary2))",
 
               color: "#fff",
               display: "flex",

@@ -990,6 +990,14 @@ form textarea {
     left: -25%;
     right: 0;
   }
+  .reward_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 1320px) {
@@ -1233,19 +1241,13 @@ form textarea {
 
   /* ==============================reward====================================== */
   .reward_header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     width: 50%;
-    margin: auto;
   }
   .reward_card {
     padding: 7rem 1.5rem 2rem 1.5rem;
   }
   .reward_cards {
-    gap: 2rem;
+    gap: 3rem;
   }
   .first_pos {
     background-color: #8f3aff4d;
@@ -1313,6 +1315,9 @@ form textarea {
   }
   .modal {
     top: 50%;
+  }
+  .register_right h3 {
+    display: none;
   }
 }
 @media screen and (max-width: 810px) {
